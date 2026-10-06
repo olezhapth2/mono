@@ -27,7 +27,7 @@ jobs:
       - name: Build monodesign
         working-directory: monodesign
         env:
-          NEXT_BASE_PATH: /mono
+          NEXT_PUBLIC_BASE_PATH: /mono
         run: npx next build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

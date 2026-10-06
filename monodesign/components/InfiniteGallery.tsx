@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import Image from 'next/image';
 import * as THREE from 'three';
+import { assetUrl } from '@/lib/assetUrl';
 
 export interface InfiniteGalleryProps {
   images: string[];
@@ -209,7 +210,7 @@ function GalleryScene({
     }
     const loader = new THREE.TextureLoader();
     const prepare = (src: string) => {
-      const texture = loader.load(src);
+      const texture = loader.load(assetUrl(src));
       texture.colorSpace = THREE.SRGBColorSpace;
       texture.anisotropy = 4;
       texture.minFilter = THREE.LinearFilter;
