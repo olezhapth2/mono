@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #f4f3eb;
+  --color-stone: #d8d6cb;
+  --color-olive-ink: #353c1e;
+  --color-engineer: #2c3c66;
+  --font-display: var(--font-monomaniac);
+  --font-body: var(--font-inter);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
